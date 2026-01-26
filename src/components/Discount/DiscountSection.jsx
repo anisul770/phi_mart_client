@@ -1,5 +1,6 @@
 import bg_img from "../../assets/banner-image-bg-1.jpg";
 import image from "../../assets/banner-image3.png";
+import DiscountTimer from "./DiscountTimer";
 
 const DiscountSection = () => {
   return (
@@ -14,12 +15,7 @@ const DiscountSection = () => {
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">30% Discount on All items. Hurry Up !!!</h1>
           {/* CountDown Timer */}
-          <div className="flex justify-center md:justify-start space-x-8 text-2xl font-semibold text-gray-800 my-6">
-            <div><span className="text-3xl text-pink-500">25</span><br />Days</div>
-            <div><span className="text-3xl text-pink-500">23</span><br />Hrs</div>
-            <div><span className="text-3xl text-pink-500">36</span><br />Min</div>
-            <div><span className="text-3xl text-pink-500">25</span><br />Sec</div>
-          </div>
+          <DiscountTimer/>
           <button className="btn btn-secondary px-6 py-3 rounded-full shadow-md">Shop Collection</button>
         </div>
       </div>
