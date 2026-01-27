@@ -1,5 +1,5 @@
-import bg_img from "../../assets/banner-image-bg-1.jpg";
-import image from "../../assets/banner-image3.png";
+import bg_img from "../../../assets/banner-image-bg-1.jpg";
+import image from "../../../assets/banner-image3.png";
 import DiscountTimer from "./DiscountTimer";
 
 const DiscountSection = () => {

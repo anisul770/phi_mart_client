@@ -2,7 +2,7 @@ import defaultImage from "../../assets/default-placeholder-1-1024x1024-570x760.p
 
 const ProductItem = ({product}) => {
   return (
-    <div className="card bg-base-100 w-11/12 shadow-sm">
+    <div className="card bg-base-100 max-w-96 shadow-sm">
       <figure className="px-10 pt-10">
         <img
           src={product.images.length > 0 ? product.images[0].image : defaultImage}
