@@ -3,7 +3,7 @@ import ProductItem from '../Products/ProductItem';
 
 const ProductList = ({ products, loading }) => {
   if (loading) return (
-    <div className='flex justify-center items-center py-10 min-h-screen'>
+    <div className='flex justify-center py-10 min-h-screen'>
       <span className="loading loading-xl loading-spinner text-error"></span>
     </div>
   );
