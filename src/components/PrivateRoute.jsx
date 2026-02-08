@@ -4,7 +4,7 @@ import { Navigate } from 'react-router';
 
 const PrivateRoute = ({ children }) => {
   const { user } = useAuthContext();
-  if (user === null && localStorage.getItem("authTokens")) return (<div className='text-center py-10'>
+  if (user === null && localStorage.getItem('authTokens') ) return (<div className='text-center py-10'>
     <span className="loading loading-xl loading-spinner text-error"></span>
   </div>);
   return user ? children : <Navigate to="/login"></Navigate>;
