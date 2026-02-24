@@ -22,7 +22,7 @@ const useCart = () => {
     } finally {
       setLoading(false);
     }
-  }, [authToken, cartId]);
+  }, [cartId]);
 
   // Add items to the cart
   const AddCartItems = useCallback(async (product, quantity) => {
@@ -68,7 +68,7 @@ const useCart = () => {
     initializeCart();
   },[createOrGetCart]);
 
-  return { cart,loading, createOrGetCart, AddCartItems , updateCartItemQuantity, deleteCartItems};
+  return { cart,loading,cartId, createOrGetCart, AddCartItems , updateCartItemQuantity, deleteCartItems};
 };
 
 export default useCart;       
