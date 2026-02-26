@@ -2,12 +2,16 @@ import { useState } from 'react';
 import { FaCheck, FaShoppingCart } from 'react-icons/fa';
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 import useCartContext from '../../hooks/useCartContext';
+import useAuthContext from '../../hooks/useAuthContext';
+import { Navigate, useNavigate } from 'react-router';
 
 const AddToCartButton = ({ product }) => {
+  const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
   const { AddCartItems } = useCartContext();
+  const {user} = useAuthContext();
 
   const increaseQuantity = () => {
     if (quantity < product.stock) {
@@ -20,7 +24,12 @@ const AddToCartButton = ({ product }) => {
     }
   };
 
+  const navigateTo =() => {
+    navigate('/login');
+  }
+
   const addToCart = async() => {
+    
     setIsAdding(true);
     try{
       await AddCartItems(product.id, quantity);
@@ -58,7 +67,7 @@ const AddToCartButton = ({ product }) => {
           <FaPlus className='h-4 w-4' />
         </button>
       </div>
-      <button className='btn btn-primary w-full' onClick={addToCart} disabled={isAdding || isAdded || product.stock === 0}>
+      <button className='btn btn-primary w-full' onClick={user? addToCart: navigateTo} disabled={isAdding || isAdded || product.stock === 0}>
         {isAdding ? (
           <span className='flex items-center'>
             <span className='loading loading-spinner loading-sm mr-2'></span>

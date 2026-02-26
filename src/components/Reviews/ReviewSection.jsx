@@ -32,7 +32,7 @@ const ReviewSection = () => {
       await authApiClient.post(`/products/${productId}/reviews/`, data);
       fetchReviews();
     } catch (error) {
-      console.log("Error submitting review", error);
+      console.log("Error submitting review", error.response,userCanReview);
     }
   }
 

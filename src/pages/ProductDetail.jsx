@@ -90,7 +90,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
-      <ReviewSection/>
+      <ReviewSection />
     </div>
   );
 };
