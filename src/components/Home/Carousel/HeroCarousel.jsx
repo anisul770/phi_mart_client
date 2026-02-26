@@ -10,6 +10,8 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import CarouselSlide from './CarouselSlide';
 import book from "../../../assets/images/book.png";
+import laptop from "../../../assets/images/technology.png";
+import fashion from "../../../assets/images/fashion.png";
 
 const HeroCarousel = () => {
 
@@ -20,14 +22,14 @@ const HeroCarousel = () => {
       image : book,
     },
     {
-      title: "This Fine Print Book Collections",
-      subtitle: "Discount available. Grab it now!",
-      image : book,
+      title: "Your Digital World, Connected.",
+      subtitle: "Explore a range of devices for seamless living.",
+      image : laptop,
     },
     {
       title: "This Fine Print Book Collections",
       subtitle: "Discount available. Grab it now!",
-      image : book,
+      image : fashion,
     },
   ]
 

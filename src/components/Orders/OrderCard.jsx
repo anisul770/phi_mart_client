@@ -59,7 +59,7 @@ const OrderCard = ({ order, onCancel }) => {
               <option value="Shipped">Shipped</option>
               <option value="Ready To Ship">Ready To Ship</option>
               <option value="Delivered">Delivered</option>
-              <option value="Canceled ">Canceled </option>
+              <option value="Canceled">Canceled</option>
             </select>
           ) : (
             <span
